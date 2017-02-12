@@ -14,4 +14,9 @@ public class LevelController : MonoBehaviour {
     {
         SceneManager.LoadScene("Win");
     }
+
+    public void LoadStartGame()
+    {
+        SceneManager.LoadScene("Start");
+    }
 }
