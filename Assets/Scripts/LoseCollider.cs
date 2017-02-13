@@ -7,7 +7,7 @@ public class LoseCollider : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        print("Colission");
+
     }
 
     private void OnTriggerEnter2D(Collider2D trigger)
