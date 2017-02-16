@@ -12,11 +12,21 @@ public class LevelController : MonoBehaviour {
 
     public void LoadWinScene()
     {
-        SceneManager.LoadScene("Win");
+        SceneManager.LoadScene("Win Screen");
+    }
+    public void LoadLostScene()
+    {
+        SceneManager.LoadScene("Lose Screen");
     }
 
     public void LoadStartGame()
     {
         SceneManager.LoadScene("Start");
+    }
+
+    public void LoadNextLevel()
+    {
+        var NextSceneIndex = SceneManager.GetActiveScene().buildIndex+1;
+        SceneManager.LoadScene(NextSceneIndex);
     }
 }
