@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Brick : MonoBehaviour {
     public int maxHits;
+    public Sprite[] hitSprites;
     int hitCounter;
     public LevelController LevelController;
 
@@ -23,6 +24,13 @@ public class Brick : MonoBehaviour {
         hitCounter++;
         if (this.hitCounter >= this.maxHits)
             Destroy(gameObject);
+        else LoadProperSprite();
+    }
+
+    void LoadProperSprite()
+    {
+        int SpriteIndex = hitCounter - 1;
+        this.GetComponent<SpriteRenderer>().sprite = hitSprites[SpriteIndex];
     }
     // TODO remove this method when we actually can win
     void SimulateWin()
